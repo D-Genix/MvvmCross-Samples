@@ -61,7 +61,7 @@ namespace StarWarsSample.Core.ViewModels
 
             if (!destroy)
                 return;
-
+            
             var request = new DestructionAction
             {
                 OnDestroyed = () => Close(new DestructionResult<Planet> { Entity = Planet, Destroyed = true })

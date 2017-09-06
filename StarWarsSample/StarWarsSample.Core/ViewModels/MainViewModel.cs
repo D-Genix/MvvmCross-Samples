@@ -13,6 +13,7 @@ namespace StarWarsSample.Core.ViewModels
 
             ShowPeopleViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<PeopleViewModel>());
             ShowPlanetsViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<PlanetsViewModel>());
+            ShowSpeciesViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<SpeciesViewModel>());
             ShowMenuViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<MenuViewModel>());
         }
 
@@ -27,6 +28,7 @@ namespace StarWarsSample.Core.ViewModels
         // MVVM Commands
         public IMvxAsyncCommand ShowPeopleViewModelCommand { get; private set; }
         public IMvxAsyncCommand ShowPlanetsViewModelCommand { get; private set; }
+        public IMvxAsyncCommand ShowSpeciesViewModelCommand { get; private set; }
         public IMvxAsyncCommand ShowMenuViewModelCommand { get; private set; }
 
         // Private methods

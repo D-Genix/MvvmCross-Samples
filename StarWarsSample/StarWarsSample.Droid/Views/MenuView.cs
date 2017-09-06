@@ -45,6 +45,12 @@ namespace StarWarsSample.Droid.Views
             var imgPeople = VectorDrawableCompat.Create(Resources, Resource.Drawable.people, Activity.Theme);
             iconPeople.SetIcon(imgPeople);
 
+            var iconSpecies = _navigationView.Menu.FindItem(Resource.Id.nav_specie);
+            iconSpecies.SetTitle(Strings.TargetSpecies);
+            iconSpecies.SetCheckable(false);
+            var imgSpecie = VectorDrawableCompat.Create(Resources, Resource.Drawable.specie, Activity.Theme);
+            iconSpecies.SetIcon(imgSpecie);
+
             var iconStatistics = _navigationView.Menu.FindItem(Resource.Id.nav_statistics);
             iconStatistics.SetTitle(Strings.Statistics);
             iconStatistics.SetCheckable(false);
@@ -81,6 +87,9 @@ namespace StarWarsSample.Droid.Views
                     break;
                 case Resource.Id.nav_people:
                     ViewModel.ShowPeopleCommand.Execute(null);
+                    break;
+                case Resource.Id.nav_specie:
+                    ViewModel.ShowSpecieCommand.Execute(null);
                     break;
                 case Resource.Id.nav_statistics:
                     ViewModel.ShowStatusCommand.Execute(null);

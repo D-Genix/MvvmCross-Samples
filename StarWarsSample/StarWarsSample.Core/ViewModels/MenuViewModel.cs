@@ -14,6 +14,7 @@ namespace StarWarsSample.Core.ViewModels
 
             ShowPlanetsCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<PlanetsViewModel>());
             ShowPeopleCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<PeopleViewModel>());
+            ShowSpecieCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<SpeciesViewModel>());
             ShowStatusCommand = new MvxAsyncCommand(async () => await _navigationService.Navigate<StatusViewModel>());
         }
 
@@ -25,6 +26,7 @@ namespace StarWarsSample.Core.ViewModels
         public IMvxCommand ShowStatusCommand { get; private set; }
         public IMvxCommand ShowPlanetsCommand { get; private set; }
         public IMvxCommand ShowPeopleCommand { get; private set; }
+        public IMvxCommand ShowSpecieCommand { get; private set; }
 
         // Private methods
     }
